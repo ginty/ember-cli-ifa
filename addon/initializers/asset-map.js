@@ -18,7 +18,7 @@ export function initialize(app) {
     let ifaPlaceholder = document.querySelector('[property="ifa:placeholder"]');
 
     if (ifaPlaceholder) {
-      assetMapFile = decodeURIComponent(ifaPlaceholder.getAttribute('content'));
+      assetMapFile = '/' + decodeURIComponent(ifaPlaceholder.getAttribute('content'));
     }
   }
 
