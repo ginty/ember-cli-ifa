@@ -15,6 +15,10 @@ export function initialize(app) {
     return;
   }
 
+  if (assetMapFile) {
+    assetMapFile = '/' + assetMapFile;
+  }
+
   if (getTypeOf(assetMapFile) === 'object' && assetMapFile.assets) {
     AssetMap.reopen({
       map: assetMapFile.assets,
